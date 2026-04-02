@@ -7,9 +7,9 @@ const rateLimit = require("express-rate-limit");
 const connectDB = require("./config/db");
 
 const authRoutes = require("./routes/authRoute");
-// const userRoutes = require("./routes/userRoutes");
-// const transactionRoutes = require("./routes/transactionRoutes");
-// const dashboardRoutes = require("./routes/dashboardRoutes");
+const userRoutes = require("./routes/userRoutes");
+const transactionRoutes = require("./routes/transactionRoute");
+const dashboardRoutes = require("./routes/dashboardRoute");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -23,9 +23,9 @@ app.use(rateLimit({ windowMs: 15 * 60 * 1000, max: 100 })); // 100requests/15min
 
 //Routes
 app.use("/api/auth", authRoutes);
-// app.use("/api/users", userRoutes);
-// app.use("/api/transactions", transactionRoutes);
-// app.use("/api/dashboard", dashboardRoutes);
+app.use("/api/users", userRoutes);
+app.use("/api/transactions", transactionRoutes);
+app.use("/api/dashboard", dashboardRoutes);
 
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;

@@ -1,0 +1,112 @@
+### === AUTH ===
+
+### Register
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{ "name": "New User", "email": "new@test.com", "password": "test123" }
+
+### Login as Admin
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{ "email": "admin@test.com", "password": "admin123" }
+
+### Login as Analyst
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{ "email": "analyst@test.com", "password": "analyst123" }
+
+### Login as Viewer
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{ "email": "viewer@test.com", "password": "viewer123" }
+
+### Profile (paste your token below)
+GET http://localhost:3000/api/auth/profile
+Authorization: Bearer <paste-token-here>
+
+### === TRANSACTIONS ===
+
+### Create Transaction (Admin only)
+POST http://localhost:3000/api/transactions
+Authorization: Bearer <admin-token>
+Content-Type: application/json
+
+{ "amount": 3000, "type": "income", "category": "salary", "description": "April salary" }
+
+### List all transactions
+GET http://localhost:3000/api/transactions
+Authorization: Bearer <any-token>
+
+### List with filters (income only)
+GET http://localhost:3000/api/transactions?type=income&page=1&limit=5
+Authorization: Bearer <any-token>
+
+### List with filters (expense only)
+GET http://localhost:3000/api/transactions?type=expense&page=1&limit=5
+Authorization: Bearer <any-token>
+
+### Filter by date range
+GET http://localhost:3000/api/transactions?startDate=2025-01-01&endDate=2025-12-31
+Authorization: Bearer <any-token>
+
+### Filter by category
+GET http://localhost:3000/api/transactions?category=salary
+Authorization: Bearer <any-token>
+
+### Search
+GET http://localhost:3000/api/transactions?search=salary
+Authorization: Bearer <any-token>
+
+### Get single transaction by ID
+GET http://localhost:3000/api/transactions/<transaction-id>
+Authorization: Bearer <any-token>
+
+### Update Transaction (Admin only)
+PUT http://localhost:3000/api/transactions/<transaction-id>
+Authorization: Bearer <admin-token>
+Content-Type: application/json
+
+{ "amount": 3500, "type": "income", "category": "salary", "description": "April salary (updated)" }
+
+### Delete Transaction (Admin only)
+DELETE http://localhost:3000/api/transactions/<transaction-id>
+Authorization: Bearer <admin-token>
+
+### === DASHBOARD ===
+
+### Summary (Analyst/Admin only)
+GET http://localhost:3000/api/dashboard/summary
+Authorization: Bearer <analyst-or-admin-token>
+
+### Category Breakdown
+GET http://localhost:3000/api/dashboard/category-breakdown
+Authorization: Bearer <analyst-or-admin-token>
+
+### Monthly Trend
+GET http://localhost:3000/api/dashboard/monthly-trend
+Authorization: Bearer <analyst-or-admin-token>
+
+### Recent Transactions
+GET http://localhost:3000/api/dashboard/recent
+Authorization: Bearer <analyst-or-admin-token>
+
+### === USER MANAGEMENT ===
+
+### List all users (Admin only)
+GET http://localhost:3000/api/users
+Authorization: Bearer <admin-token>
+
+### Change user role (Admin only)
+PATCH http://localhost:3000/api/users/<user-id>/role
+Authorization: Bearer <admin-token>
+Content-Type: application/json
+
+{ "role": "analyst" }
+
+### Toggle user status (Admin only)
+PATCH http://localhost:3000/api/users/<user-id>/status
+Authorization: Bearer <admin-token>
