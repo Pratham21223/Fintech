@@ -172,7 +172,7 @@ export default function HomePage() {
       <p className="text-[15px] text-slate-600 mb-3">
         All endpoints are relative to this base:
       </p>
-      <CodeBlock>http://localhost:3000/api</CodeBlock>
+      <CodeBlock>https://fintrack-be.vercel.app/api</CodeBlock>
 
       <h2
         id="authentication"

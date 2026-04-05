@@ -147,7 +147,7 @@ export default function Layout() {
             <Search size={20} />
           </button>
           <a
-            href="/"
+            href="https://fintrack-live.vercel.app"
             target="_blank"
             rel="noreferrer"
             className="text-slate-400 hover:text-slate-700 transition-colors"
@@ -169,7 +169,7 @@ export default function Layout() {
             </svg>
           </a>
           <a
-            href="https://github.com"
+            href="https://github.com/Pratham21223/Fintrack"
             target="_blank"
             rel="noreferrer"
             className="text-slate-400 hover:text-slate-700 transition-colors"
@@ -183,7 +183,7 @@ export default function Layout() {
 
         <div className="shrink-0 hidden sm:flex items-center gap-4">
           <a
-            href="/"
+            href="https://fintrack-live.vercel.app"
             target="_blank"
             rel="noreferrer"
             className="text-slate-400 hover:text-slate-700 transition-colors"
@@ -205,7 +205,7 @@ export default function Layout() {
             </svg>
           </a>
           <a
-            href="https://github.com"
+            href="https://github.com/Pratham21223/Fintrack"
             target="_blank"
             rel="noreferrer"
             className="text-slate-400 hover:text-slate-700 transition-colors"

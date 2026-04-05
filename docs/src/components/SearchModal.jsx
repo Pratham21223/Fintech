@@ -242,7 +242,7 @@ const searchIndex = [
   // Homepage topics
   {
     title: "Base URL",
-    desc: "http://localhost:3000/api",
+    desc: "https://fintrack-be.vercel.app/api",
     path: "/",
     section: "Getting Started",
     keywords: "url endpoint base host port",
