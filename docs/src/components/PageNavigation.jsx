@@ -3,10 +3,18 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const pages = [
   { path: "/", label: "Introduction" },
+  { path: "/quick-start", label: "Quick Start" },
   { path: "/auth", label: "Authentication" },
   { path: "/transactions", label: "Transactions" },
   { path: "/dashboard", label: "Dashboard" },
   { path: "/users", label: "User Management" },
+  { path: "/concepts/jwt", label: "JWT Authentication" },
+  { path: "/concepts/rbac", label: "Role-Based Access Control" },
+  { path: "/concepts/data-models", label: "Data Models" },
+  { path: "/concepts/aggregation", label: "MongoDB Aggregation" },
+  { path: "/architecture/project-structure", label: "Project Structure" },
+  { path: "/architecture/environment", label: "Environment & Setup" },
+  { path: "/error-handling", label: "Error Handling" },
 ];
 
 export default function PageNavigation() {

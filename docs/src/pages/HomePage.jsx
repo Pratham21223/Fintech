@@ -132,10 +132,6 @@ export default function HomePage() {
       {/* Hero */}
       <div className="relative mb-12">
         <div className="absolute -inset-x-6 -top-10 bottom-0 bg-linear-to-b from-indigo-50/70 via-indigo-50/30 to-transparent rounded-3xl -z-10" />
-        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-[12px] font-bold tracking-wide mb-4">
-          <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse" />
-          v1.0 — REST API
-        </span>
         <h1 className="text-[2.75rem] leading-[1.15] font-extrabold text-slate-900 tracking-tight mb-4">
           FinTrack API
           <br />
@@ -453,9 +449,9 @@ export default function HomePage() {
                 admin123
               </td>
               <td className="px-4 py-3">
-                <span className="px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 text-[12px] font-bold">
-                  admin
-                </span>
+                <code className="font-mono text-[13px] text-slate-700 font-medium">
+                  Admin
+                </code>
               </td>
             </tr>
             <tr className="border-b border-slate-100 hover:bg-indigo-50/40 transition-colors">
@@ -466,9 +462,9 @@ export default function HomePage() {
                 analyst123
               </td>
               <td className="px-4 py-3">
-                <span className="px-2 py-0.5 rounded-full bg-indigo-100 text-indigo-700 text-[12px] font-bold">
-                  analyst
-                </span>
+                <code className="font-mono text-[13px] text-slate-700 font-medium">
+                  Analyst
+                </code>
               </td>
             </tr>
             <tr className="hover:bg-indigo-50/40 transition-colors">
@@ -479,9 +475,9 @@ export default function HomePage() {
                 viewer123
               </td>
               <td className="px-4 py-3">
-                <span className="px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 text-[12px] font-bold">
-                  viewer
-                </span>
+                <code className="font-mono text-[13px] text-slate-700 font-medium">
+                  Viewer
+                </code>
               </td>
             </tr>
           </tbody>

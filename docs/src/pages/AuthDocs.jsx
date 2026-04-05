@@ -4,13 +4,10 @@ export default function AuthDocs() {
   return (
     <div>
       <div className="mb-10">
-        <div className="flex items-center gap-3 mb-3">
+        <div className="mb-3">
           <h1 className="text-4xl font-extrabold text-slate-900 tracking-tight">
             Authentication
           </h1>
-          <span className="mt-1 px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-700 text-[12px] font-bold">
-            3 endpoints
-          </span>
         </div>
         <p className="text-[17px] font-medium text-slate-600 leading-relaxed max-w-2xl">
           Register new accounts, authenticate users with JWT tokens, and
@@ -28,9 +25,9 @@ export default function AuthDocs() {
         auth="None"
         roles="Public"
         body={`{
-  "name": "John Doe",
-  "email": "john@example.com",
-  "password": "123456"
+  "name": "New User",
+  "email": "new@test.com",
+  "password": "test123"
 }`}
         response={`{
   "success": true,

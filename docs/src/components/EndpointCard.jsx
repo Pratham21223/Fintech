@@ -1,4 +1,5 @@
 import CodeBlock from "./CodeBlock";
+import RequestBlock from "./RequestBlock";
 
 const methodConfig = {
   GET: {
@@ -133,7 +134,7 @@ export default function EndpointCard({
           </div>
         )}
 
-        {body && <CodeBlock title="Request Body">{body}</CodeBlock>}
+        <RequestBlock method={method} path={path} auth={auth} body={body} />
 
         <CodeBlock title="Response">{response}</CodeBlock>
 

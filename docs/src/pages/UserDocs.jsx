@@ -4,13 +4,10 @@ export default function UserDocs() {
   return (
     <div>
       <div className="mb-10">
-        <div className="flex items-center gap-3 mb-3">
+        <div className="mb-3">
           <h1 className="text-4xl font-extrabold text-slate-900 tracking-tight">
             User Management
           </h1>
-          <span className="mt-1 px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-700 text-[12px] font-bold">
-            3 endpoints
-          </span>
         </div>
         <p className="text-[17px] font-medium text-slate-600 leading-relaxed max-w-2xl">
           Administrative endpoints for managing user accounts. List all users,

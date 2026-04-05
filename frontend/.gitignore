@@ -11,8 +11,6 @@ node_modules
 dist
 dist-ssr
 *.local
-fintech-backend-plan.md
-fintech-frontend-plan-7afe20.md
 
 # Editor directories and files
 .vscode/*
@@ -24,4 +22,3 @@ fintech-frontend-plan-7afe20.md
 *.njsproj
 *.sln
 *.sw?
-.vercel

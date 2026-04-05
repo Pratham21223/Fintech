@@ -4,13 +4,10 @@ export default function DashboardDocs() {
   return (
     <div>
       <div className="mb-10">
-        <div className="flex items-center gap-3 mb-3">
+        <div className="mb-3">
           <h1 className="text-4xl font-extrabold text-slate-900 tracking-tight">
             Dashboard
           </h1>
-          <span className="mt-1 px-2.5 py-0.5 rounded-full bg-purple-100 text-purple-700 text-[12px] font-bold">
-            4 endpoints
-          </span>
         </div>
         <p className="text-[17px] font-medium text-slate-600 leading-relaxed max-w-2xl">
           Analytics and aggregation endpoints powered by MongoDB pipelines. Get

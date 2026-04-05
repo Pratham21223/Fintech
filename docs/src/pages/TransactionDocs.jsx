@@ -82,13 +82,10 @@ export default function TransactionDocs() {
   return (
     <div>
       <div className="mb-10">
-        <div className="flex items-center gap-3 mb-3">
+        <div className="mb-3">
           <h1 className="text-4xl font-extrabold text-slate-900 tracking-tight">
             Transactions
           </h1>
-          <span className="mt-1 px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-700 text-[12px] font-bold">
-            5 endpoints
-          </span>
         </div>
         <p className="text-[17px] font-medium text-slate-600 leading-relaxed max-w-2xl">
           Full CRUD for financial records with filtering, search, and
@@ -168,11 +165,10 @@ export default function TransactionDocs() {
         auth="Bearer Token"
         roles="Admin"
         body={`{
-  "amount": 5000,
+  "amount": 3000,
   "type": "income",
   "category": "salary",
-  "description": "March salary",
-  "date": "2025-03-15"
+  "description": "April salary"
 }`}
         response={`{
   "success": true,
@@ -202,11 +198,10 @@ export default function TransactionDocs() {
         auth="Bearer Token"
         roles="Admin"
         body={`{
-  "amount": 5500,
+  "amount": 3500,
   "type": "income",
   "category": "salary",
-  "description": "March salary (updated)",
-  "date": "2025-03-15"
+  "description": "April salary (updated)"
 }`}
         response={`{
   "success": true,
