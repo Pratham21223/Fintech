@@ -10,6 +10,7 @@ const validate = require("../middlewares/validate");
 
 const router = express.Router();
 
+//router.method(route,Validator middleware, controller)
 router.post(
   "/register",
   [

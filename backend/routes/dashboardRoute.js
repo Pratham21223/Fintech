@@ -8,9 +8,10 @@ const {
   getRecentTransactions,
 } = require("../controllers/dashboardController");
 
-// All dashboard routes: analyst + admin only
+//Authorise to analyst and admin only
 router.use(verifyToken, authorize("analyst", "admin"));
 
+//router.method(route, controller)
 router.get("/summary", getSummary);
 router.get("/category-breakdown", getCategoryBreakdown);
 router.get("/monthly-trend", getMonthlyTrend);

@@ -11,14 +11,14 @@ const {
   deleteTransaction,
 } = require("../controllers/transactionController");
 
-// All routes require authentication
+// Authentication required to access any transaction route
 router.use(verifyToken);
 
-// Viewing
+// Viewing for all users
 router.get("/", getTransactions);
 router.get("/:id", getTransactionById);
 
-//For admin only
+//For Admin only
 router.post(
   "/",
   authorize("admin"),
